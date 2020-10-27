@@ -3,7 +3,7 @@ apiVersion: "entando.org/v1"
 metadata:
   name: "customerportal-plugin"
 spec:
-  image: nathanshaw/customerportal:0.0.1-SNAPSHOT
+  image: nathanshaw/customerportal:0.0.2-SNAPSHOT
   replicas: 1
   dbms: postgresql
   parameters: {}
