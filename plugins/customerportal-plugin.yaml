@@ -1,24 +1,10 @@
-kind: "EntandoPlugin"
-apiVersion: "entando.org/v1"
-metadata:
-  name: "customerportal-plugin"
-spec:
-  image: nathanshaw/customerportal:0.0.2-SNAPSHOT
-  replicas: 1
-  dbms: postgresql
-  parameters: {}
-  ingressPath: "/customerportal"
-  healthCheckPath: "/management/health"
-  securityLevel: "strict"
-  connectionConfigNames: []
-  permissions: []
-  roles:
-  - name: customerportal-admin
-    code: customerportal-admin
-  - name: partner-admin
-    code: "partner-admin"
-  - name: customer-admin
-    code: "customer-admin"
-  - name: project-admin
-    code: "project-admin"
+image: nathanshaw/customerportal:0.0.2-SNAPSHOT
+dbms: postgresql
+deploymentBaseName: "nathanshaw-customer-portal"
+healthCheckPath: "/management/health"
+roles:
+  - customerportal-admin
+  - partner-admin
+  - customer-admin
+  - project-admin
 # entando-needle-descriptor-add-roles - Entando blueprint will add roles here
