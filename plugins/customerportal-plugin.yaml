@@ -1,7 +1,8 @@
+name: nathanshaw-customerportal
 image: nathanshaw/customerportal:0.0.2-SNAPSHOT
-dbms: postgresql
-deploymentBaseName: "nathanshaw-customer-portal"
+dbms: none
 healthCheckPath: "/management/health"
+deploymentBaseName: "nathanshaw-customer-portal"
 roles:
   - customerportal-admin
   - partner-admin
